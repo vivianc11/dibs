@@ -20,10 +20,9 @@ document.addEventListener("click", async (event)=>{
     if (response.ok) {
       // If successful, redirect the browser to the profile page
       document.location.replace('/profile');
-    } else {
-      alert(response.statusText);
-    } 
-    }
+    } else { 
+      alert(response.statusText); 
+    }}
   } else if (clicked.getAttribute("class")==="un-dib mt-auto") {
 
   if(confirm("Are you sure you want to put this item back in the market?")){
