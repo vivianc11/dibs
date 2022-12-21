@@ -1,0 +1,28 @@
+[
+	{
+		"username": "akinsman",
+		"password": "securepassword",
+		"email": "email@gmail.com"
+	},
+	{
+		"username": "smartypants",
+		"password": "hotwheels",
+		"email": "hotwheel@gmail.com"
+	},
+	{
+		"username": "bacongrease",
+		"password": "greasy",
+		"email": "drinkgrease@gmail.com"
+	},
+	{
+		"username": "chocolatemilk",
+		"password": "wholemilk",
+		"email": "drinkmilk@gmail.com"
+	},
+	{
+		"username": "princesspeach",
+		"password": "mariobros",
+		"email": "peachesandcream@gmail.com"
+	}
+]
+  
