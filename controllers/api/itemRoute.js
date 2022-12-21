@@ -35,3 +35,25 @@ router.get('/:id', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+// POST ALL ITEMS
+router.post('/', async (req, res) => {
+    try {
+      
+      const newItem = await Item.create({
+            id: req.body.id,
+            name: req.body.name,
+            
+            description: req.body.description,
+            giver_id: req.session.user_id,
+        })
+        
+        // console.log(req.session.user_id)
+        // console.log("Created Item");
+        // console.log(req.body.giver_id);
+  
+        res.status(200).json(newItem);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+  });
