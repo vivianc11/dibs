@@ -79,3 +79,26 @@ router.delete('/:id', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  router.put('/:id', (req, res) => {
+    Item.update(
+      {
+        // Updates an item if it is claimed as dibbed
+        is_dibbed: req.body.is_dibbed
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    )
+      .then((updatedItem) => {
+        res.json(updatedItem);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.json(err);
+      });
+  });
+  
+  module.exports = router;
