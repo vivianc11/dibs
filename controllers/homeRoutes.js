@@ -63,16 +63,16 @@ router.get('/login', (req, res) => {
     res.render('loginpage');
   });
   
-  // When you get to the logout page, it will just redirect you to the login again
-  router.get('/logout', (req, res) => {
+// When you get to the logout page, it will just redirect you to the login again
+router.get('/logout', (req, res) => {
     if (req.session.logged_in) {
-      req.session.destroy(() => {
+        req.session.destroy(() => {
         res.render('loginpage');
-      });
+        });
     } else {
-      res.render('loginpage', { logged_in: false });
+        res.render('loginpage', { logged_in: false });
     }
-  });
+});
 
   // Getting Signup Page
 router.get('/signup', (req, res) => {
@@ -82,4 +82,42 @@ router.get('/signup', (req, res) => {
     } else {
         res.render('signup');
     }
-  })
+})
+
+// Need to be authenticated to be able to see your own profile
+router.get('/profile', withAuth, async (req, res) => {
+    try {
+      // Get giver username based on giver that is logged in
+      const giverData = await Giver.findAll({
+        where: {
+          username: req.session.username
+        },
+        attributes: ['username', 'id']
+      });
+    
+      // Serialize data so the template can read it
+    const givers = giverData.map((giver) => giver.get({ plain: true }));
+    // console.log(givers);
+
+    // SELECT * FROM ITEM;
+    const itemData = await Item.findAll({ 
+      where: {
+        giver_id: req.session.user_id
+      },
+    });
+    // console.log(req.session.user_id)
+    const items = itemData.map((item) => item.get({ plain: true }));
+    console.log(items.length);
+
+    
+  
+    // Pass serialized data and session flag into template
+    res.render('profile', { 
+      givers, 
+      items,
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
