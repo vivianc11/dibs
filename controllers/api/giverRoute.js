@@ -28,3 +28,17 @@ router.post('/signup', async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+// Find all 'Givers'
+router.get('/', async (req, res) => {
+    try {
+        const findAll = await Giver.findAll({
+            attributes: { exclude: ['password'] }
+        })
+
+        res.json(findAll);
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+})
