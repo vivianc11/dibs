@@ -2,6 +2,9 @@
   "name": "dibs",
   "version": "1.0.0",
   "description": "Do you ever feel like you have so much junk in your home BUT you just can't bring yourself to throw it away? Conversely, do you ever want anything but just can't justify spending your hard-earned money on it? We have an application for you! Utilize our application to find people in your vicinity that want to take your junk OR to get items that are treasures, all for free... the only caveat? You have to get DIBS on the item, and you only have an hour to pick it up, otherwise, other people can call dibs on it! (But keep in mind, you can only call dibs on 8 items at a time!)",
+  "engines": {
+    "node": "12.11.1"
+    },
   "main": "server.js",
   "scripts": {
     "test": "jest",
