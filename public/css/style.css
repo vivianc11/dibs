@@ -1,0 +1,109 @@
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+}
+.main-background {
+  background-color: #bcbaf51d !important;
+}
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.h-custom {
+  height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+  .h-custom {
+  height: 100%;
+  }
+}
+
+.background {
+  background-image: url("https://img.freepik.com/free-vector/giant-octopus-swim-water-ocean-vector-cartoon-illustration-underwater-sea-landscape-with-marine-animal-with-tentacles-suckers-ocean-bottom-with-seaweed-stones-purple-squid_107791-11722.jpg?w=2000&t=st=1665599902~exp=1665600502~hmac=5ad63e652585c99971a135bdee7dd2b69dd5a5a70f337d60781817343ef3fdd3");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size:cover !important;
+}
+  
+.opacity {
+  background-color: rgba(255, 255, 255, 0.544) !important;
+}
+  
+.no-wrap {
+  display: flex !important;
+  flex-direction: horizontal !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap;
+}
+  
+.bckgrndcolor {
+  background-color: #3733b44a !important;
+  background-image: url("https://img.freepik.com/free-vector/giant-octopus-swim-water-ocean-vector-cartoon-illustration-underwater-sea-landscape-with-marine-animal-with-tentacles-suckers-ocean-bottom-with-seaweed-stones-purple-squid_107791-11722.jpg?w=2000&t=st=1665599902~exp=1665600502~hmac=5ad63e652585c99971a135bdee7dd2b69dd5a5a70f337d60781817343ef3fdd3");
+  background-repeat: no-repeat;
+}
+
+.profile-style {
+  padding: 40px;
+  margin-bottom: 30px;
+  background-color: #5c53d430 !important;
+}
+ 
+.octo-cursor {
+  cursor:url('../assets/images/hover.PNG') 20 20, pointer !important;
+}
+
+.new-post {
+  border: none;
+  margin-top: 30px;
+  background-color: #6029bc !important;
+  color: white !important;
+}
+
+.new-post:hover {
+  background-color:#420886 !important;
+  transition: 0.7s;
+}
+   
+.new-post-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.modal-content {
+  background-color: #926cd3f4 !important;
+  color: white !important;
+}
+
+.modal-max-width{
+  max-width: 200px;
+}
+
+#new-post-submit {
+  background-color: #ad29bc !important;
+  margin-left: 5px !important;
+}
+
+#item-name,
+#item-descr {
+  border-radius: 5px;
+}
+
+.standard-size {
+  min-height: 350px;
+  max-height: 450px;
+}
+
+.item-image {
+  max-width: 150px !important;
+  max-height: 150px !important;
+}
