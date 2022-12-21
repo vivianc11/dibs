@@ -156,7 +156,7 @@ This project is licensed under the terms of the MIT license.
 
 ## Features
 
-Our application will allow you to make a username and password, and that will allow you access to be a "giver" and a "taker." As a giver, you can make posts to feature your items to give away, and as a taker, you can view posts and call dibs on items you want. You can also undo someone's DIBS to put it on the market place again (usually if they do not pick it up). Once it is picked up, you will be able to delete your post.
+Our application will allow you to make a username and password, and that will allow you access to be a "giver". As a giver, you can make posts to feature your items to give away, and you can view posts and call dibs on items you want. You can also undo someone's DIBS to put it on the market place again (usually if they do not pick it up). Once it is picked up, you will be able to delete your post.
 
 ## Tests
 

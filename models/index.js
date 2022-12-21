@@ -1,4 +1,3 @@
-const Taker = require('./Taker');
 const Giver = require('./Giver');
 const Post = require('./Post');
 const Item = require('./Item');
@@ -40,7 +39,6 @@ Image.belongsTo(Item,{
 });
 
 module.exports = {
-    Taker,
     Giver,
     Post,
     Item,

@@ -2,7 +2,6 @@ const sequelize = require('../config/connection');
 const { Giver, Post, Item } = require('../models');
 
 const giverData = require('./giverData.json');
-// const takerData = require('./takerData.json');
 const postData = require('./postData.json');
 // const itemData = require('./itemData.json');
 
