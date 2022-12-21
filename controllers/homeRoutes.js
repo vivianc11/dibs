@@ -30,7 +30,7 @@ router.get('/', withAuth, async(req, res) => {
         ]
       });
 
-          // Sequelize accent not in JSON 
+    // Sequelize accent not in JSON 
     // Translate Sequelize into JSON  
     const items = itemData.map((item) => item.get({ plain: true }));
     
@@ -50,3 +50,36 @@ router.get('/', withAuth, async(req, res) => {
     res.status(500).json(err);
   }
 });
+
+// Getting Login Page
+router.get('/login', (req, res) => {
+    // If the giver is already logged in, redirect the request to another route
+    if (req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
+  
+    // If you're not logged in, you will be directed to the login page
+    res.render('loginpage');
+  });
+  
+  // When you get to the logout page, it will just redirect you to the login again
+  router.get('/logout', (req, res) => {
+    if (req.session.logged_in) {
+      req.session.destroy(() => {
+        res.render('loginpage');
+      });
+    } else {
+      res.render('loginpage', { logged_in: false });
+    }
+  });
+
+  // Getting Signup Page
+router.get('/signup', (req, res) => {
+    if(req.session.logged_in) {
+        res.redirect('/');
+        return;
+    } else {
+        res.render('signup');
+    }
+  })
