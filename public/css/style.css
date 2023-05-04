@@ -57,7 +57,7 @@ h2 {
 }
  
 .octo-cursor {
-  cursor:url('../assets/images/hover.PNG') 20 20, pointer !important;
+  cursor:url('../assets/hover.PNG') 20 20, pointer !important;
 }
 
 .new-post {
